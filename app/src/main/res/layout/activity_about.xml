@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/allbackground"
+    tools:context="com.example.android.heartcomm207.com.example.android.heartcomm206.AboutActivity">
+
+    <include layout="@layout/app_bar"
+        android:id="@+id/my_toolbar"/>
+    <ImageView
+        android:id="@+id/heartComm_logo"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:src="@drawable/hcapplogo"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+    <ImageView
+        android:id="@+id/hcSlogan"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:src="@drawable/hcslogan"
+        android:layout_marginTop="12dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/heartComm_logo"
+        android:layout_alignStart="@+id/about" />
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Version 1.0"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="28dp"
+        android:layout_below="@id/hcSlogan"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/version"
+        android:textSize="22sp"
+        android:text="About this app"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/aboutText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heart comm is a system that monitors the internal condition of a user and relays that data to the neccessary agencies. The data can then be analysed to determine the probability of a heart attack occuring bassed on the patient's normal internal conditions and data from previous cases of heart attack"
+        android:textSize="15sp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="31dp"
+        android:layout_below="@+id/about"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

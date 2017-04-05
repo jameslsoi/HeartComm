@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginbackground"
+    tools:context="com.example.android.heartcomm207.com.example.android.heartcomm206.LogInActivity">
+
+
+    <ImageView
+        android:id="@+id/hcSlogan"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/hcslogan"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/heartComm_logo"
+        android:layout_alignStart="@+id/heartComm_logo" />
+
+    <ImageView
+        android:id="@+id/heartComm_logo"
+        android:layout_width="200dp"
+        android:src="@drawable/hcapplogo"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/heartComm_title"
+        android:src="@drawable/heartcomm"
+        android:layout_below="@+id/hcSlogan"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/userEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/userprompt"
+        android:paddingTop="20dp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="29dp"
+        android:maxLines="1"
+        android:imeOptions="actionDone"
+        android:layout_marginStart="32dp"
+        android:layout_below="@+id/heartComm_title"
+        android:layout_alignStart="@+id/heartComm_title" />
+
+    <EditText
+        android:id="@+id/passEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/pwprompt"
+        android:textColor="@android:color/white"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:imeOptions="actionDone"
+        android:layout_below="@+id/userEntry"
+        android:layout_alignStart="@+id/userEntry" />
+
+    <Button
+        android:id="@+id/loginbutton"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@drawable/loginbutton"
+        android:onClick="logIn"
+        android:layout_marginBottom="17dp"
+        android:layout_above="@+id/recoverpassword"
+        android:layout_alignStart="@+id/hcSlogan"
+        />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/recoverpassword"
+        android:background="@drawable/recoverpassword"
+        android:onClick="recoverpass"/>
+
+</RelativeLayout>

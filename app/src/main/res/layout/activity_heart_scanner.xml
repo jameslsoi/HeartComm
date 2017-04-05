@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/allbackground"
+    tools:context="com.example.android.heartcomm207.com.example.android.heartcomm206.HeartScannerActivity">
+    <include layout="@layout/app_bar"
+        android:id="@+id/my_toolbar"
+        />
+
+    <ImageView
+        android:id="@+id/heartComm_logo"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:src="@drawable/hcapplogo"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp" />
+
+    <TextView
+        android:id="@+id/commECG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heartComm_logo"
+        android:layout_centerHorizontal="true"
+        android:text="CommECG"
+        android:textColor="@android:color/white"
+        android:textSize="38sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How are you feeling?"
+        android:textSize="20sp"
+        android:id="@+id/feelingText"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/heartGraph"
+        android:layout_alignEnd="@+id/commECG"
+        android:layout_marginTop="10dp" />
+
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/heartGraph"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_below="@id/commECG"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:background="@drawable/ecgchart"/>
+
+    <Button
+        android:id="@+id/micButton"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:background="@drawable/recordbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/micStop" />
+
+    <Button
+        android:id="@+id/micStop"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:background="@drawable/recordbutton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/micButton"
+        android:layout_marginBottom="20dp" />
+</RelativeLayout>

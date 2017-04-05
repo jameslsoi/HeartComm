@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:windowSoftInputMode="adjustPan"
+    tools:context="com.example.android.heartcomm207.com.example.android.heartcomm206.VisualStatActivity"
+    android:background="@drawable/allbackground">
+
+    <include layout="@layout/app_bar"
+        android:id="@+id/my_toolbar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weekly Report"
+        android:textSize="30sp"
+        android:textColor="@android:color/white"
+        android:id="@+id/report"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Average heart rate per week"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/report"
+        android:id="@+id/average"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"/>
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/monthly_graph"
+        android:layout_below="@id/average"
+        android:background="@drawable/ecgchart"
+        />
+    <ScrollView
+        android:id="@+id/textScroll"
+        android:layout_below="@id/monthly_graph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/savenotes"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Save notes"
+        android:textColor="@android:color/white"
+        android:onClick="savenotesonClick"
+        android:background="@android:color/holo_red_light"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/addnotes" />
+
+    <EditText
+        android:id="@+id/addnotes"
+        android:freezesText="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/monthly_graph"
+        android:layout_centerHorizontal="true"
+        android:hint="Add Notes"
+        android:textSize="20sp" />
+
+
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/allbackground"
+    tools:context="com.example.android.heartcomm206.ProfileActiivty">
+    <include layout="@layout/app_bar"
+        android:id="@id/my_toolbar">
+
+    </include>
+    <TextView
+        android:layout_below="@id/my_toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="15dp"
+        android:layout_above="@+id/profileDetail"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="27dp" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/profileicon"
+        android:id="@+id/profilepic"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
+    <TextView
+        android:id="@+id/profileName"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="John Smith"
+        android:textSize="20sp"
+        android:layout_below="@id/profilepic"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/profileDetail"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:text="                 Contact Details \n  Email: johnsmith@207.com \n  Number:07207207207"
+        android:textSize="20dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/contactdetailsbox"
+        android:layout_marginTop="62dp"
+        android:layout_below="@+id/profilepic"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/medical_history"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="@drawable/contactdetailsbox"
+        android:textSize="20dp"
+        android:textColor="@android:color/white"
+        android:text="                 Medical History \n  Asthma: Symbricort \n  Epilepsy: tetgretol  \n "
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/profileDetail"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/emergencyCall"
+        android:foregroundGravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_below="@+id/medical_history"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:text="@string/call_ems"
+        android:onClick="callems"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/emergencycontactbox"/>
+
+</RelativeLayout>
